@@ -17,6 +17,14 @@
         },
       };
     </script>
+    <style>
+      .drawer {
+        transition: transform 0.3s ease-in-out;
+      }
+      .drawer.open {
+        transform: translateX(0);
+      }
+    </style>
   </head>
   <body class="bg-black text-gray-100 font-sans">
     <header>
@@ -83,9 +91,8 @@
           <a
             href="/overview"
             class="text-[#FFAC30] underline text-sm md:text-xl"
+            >OverView</a
           >
-            OverView
-          </a>
           <a href="/overview" class="text-white text-sm md:text-xl flex">
             Compare
             <svg
@@ -97,14 +104,12 @@
               <path d="M12 16l-6-6h12l-6 6z" />
             </svg>
           </a>
-          <a href="/overview" class="text-white text-sm md:text-xl"> Images </a>
-          <a href="/overview" class="text-white text-sm md:text-xl">
-            User Reviews
-          </a>
-          <a href="/overview" class="text-white text-sm md:text-xl">
-            Varients
-          </a>
-          <a href="/overview" class="text-white text-sm md:text-xl"> Videos </a>
+          <a href="/overview" class="text-white text-sm md:text-xl">Images</a>
+          <a href="/overview" class="text-white text-sm md:text-xl"
+            >User Reviews</a
+          >
+          <a href="/overview" class="text-white text-sm md:text-xl">Variants</a>
+          <a href="/overview" class="text-white text-sm md:text-xl">Videos</a>
           <a href="/overview" class="text-white text-sm md:text-xl flex">
             More
             <svg
@@ -117,25 +122,48 @@
             </svg>
           </a>
         </div>
-
-        <div
-          class="flex flex-col md:hidden gap-2 mt-4 border-t border-gray-700 pt-2"
-        >
-          <a href="/overview" class="text-[#FFAC30] underline text-sm">
-            OverView
-          </a>
-          <a href="/overview" class="text-white text-sm"> Compare </a>
-          <a href="/overview" class="text-white text-sm"> Images </a>
-          <a href="/overview" class="text-white text-sm"> User Reviews </a>
-          <a href="/overview" class="text-white text-sm"> Varients </a>
-          <a href="/overview" class="text-white text-sm"> Videos </a>
-          <a href="/overview" class="text-white text-sm"> More </a>
-        </div>
       </nav>
     </header>
 
+    <!-- Drawer Navigation for small screens -->
+    <div
+      id="drawer"
+      class="fixed inset-y-0 left-0 w-64 bg-black text-white transform -translate-x-full drawer md:hidden"
+    >
+      <div class="p-4">
+        <button id="close-drawer" class="text-white float-right">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+        <div class="clear-both"></div>
+        <div class="flex flex-col gap-4 mt-8">
+          <a href="/overview" class="text-[#FFAC30] underline text-xl"
+            >OverView</a
+          >
+          <a href="/overview" class="text-white text-xl">Compare</a>
+          <a href="/overview" class="text-white text-xl">Images</a>
+          <a href="/overview" class="text-white text-xl">User Reviews</a>
+          <a href="/overview" class="text-white text-xl">Variants</a>
+          <a href="/overview" class="text-white text-xl">Videos</a>
+          <a href="/overview" class="text-white text-xl">More</a>
+        </div>
+      </div>
+    </div>
+
     <main>
-      <section class="relative">
+      <section class="relative z-[-1]">
         <img
           class="w-full"
           src="/images/xuv_main.png"
@@ -1066,5 +1094,28 @@
         </p>
       </div>
     </footer>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const closeDrawer = document.getElementById("close-drawer");
+      const drawer = document.getElementById("drawer");
+
+      menuToggle.addEventListener("click", () => {
+        drawer.classList.add("open");
+      });
+
+      closeDrawer.addEventListener("click", () => {
+        drawer.classList.remove("open");
+      });
+
+      // Close drawer when clicking outside
+      document.addEventListener("click", (event) => {
+        if (
+          !drawer.contains(event.target) &&
+          !menuToggle.contains(event.target)
+        ) {
+          drawer.classList.remove("open");
+        }
+      });
+    </script>
   </body>
 </html>
