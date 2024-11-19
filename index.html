@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahindra XUV700 - Tailwind CSS Integration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1D4ED8",
+              secondary: "#9333EA",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-black text-gray-100 font-sans">
+    <header>
+      <nav class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-4 p-4 items-center">
+          <button id="menu-toggle" class="focus:outline-none md:hidden">
+            <svg
+              class="w-8 h-8"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+
+          <div
+            class="flex flex-wrap bg-[#2E2E2E] gap-2 w-full md:w-fit rounded-md p-2 items-center"
+          >
+            <svg
+              class="w-6 h-6 text-gray-500 hover:text-secondary"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11 19a8 8 0 100-16 8 8 0 000 16zm10-1l-4.35-4.35"
+              />
+            </svg>
+            <input
+              placeholder="Search...."
+              class="border-l-2 bg-transparent outline-none text-white flex-1"
+            />
+            <svg
+              class="w-6 h-6 text-gray-500 hover:text-secondary"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="hidden md:flex gap-4 w-full justify-between border-t border-gray-700 pt-4"
+        >
+          <a
+            href="/overview"
+            class="text-[#FFAC30] underline text-sm md:text-xl"
+          >
+            OverView
+          </a>
+          <a href="/overview" class="text-white text-sm md:text-xl flex">
+            Compare{" "}
+            <svg
+              class="w-4 md:w-6 h-4 md:h-6 text-white hover:text-secondary ml-1"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 16l-6-6h12l-6 6z" />
+            </svg>
+          </a>
+          <a href="/overview" class="text-white text-sm md:text-xl"> Images </a>
+          <a href="/overview" class="text-white text-sm md:text-xl">
+            User Reviews
+          </a>
+          <a href="/overview" class="text-white text-sm md:text-xl">
+            Varients
+          </a>
+          <a href="/overview" class="text-white text-sm md:text-xl"> Videos </a>
+          <a href="/overview" class="text-white text-sm md:text-xl flex">
+            More{" "}
+            <svg
+              class="w-4 md:w-6 h-4 md:h-6 text-white hover:text-secondary ml-1"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 16l-6-6h12l-6 6z" />
+            </svg>
+          </a>
+        </div>
+
+        <div
+          class="flex flex-col md:hidden gap-2 mt-4 border-t border-gray-700 pt-2"
+        >
+          <a href="/overview" class="text-[#FFAC30] underline text-sm">
+            OverView
+          </a>
+          <a href="/overview" class="text-white text-sm"> Compare </a>
+          <a href="/overview" class="text-white text-sm"> Images </a>
+          <a href="/overview" class="text-white text-sm"> User Reviews </a>
+          <a href="/overview" class="text-white text-sm"> Varients </a>
+          <a href="/overview" class="text-white text-sm"> Videos </a>
+          <a href="/overview" class="text-white text-sm"> More </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="relative">
+        <img
+          class="w-full"
+          src="/images/xuv_main.png"
+          alt="Mahindra XUV700 main image"
+        />
+        <p
+          class="text-white absolute bottom-24 w-full md:w-[600px] left-1/2 transform -translate-x-1/2 text-center font-light text-lg"
+        >
+          With its Sci-Fi Technology, Spirited Performance and World-Class
+          Safety, this powerhouse of an SUV is obsessively engineered to dial up
+          adrenaline like never before.
+        </p>
+      </section>
+
+      <section class="container mx-auto px-4 py-8">
+        <div
+          class="flex justify-center gap-8 items-center flex-col md:flex-row"
+        >
+          <div class="flex flex-col items-start gap-6">
+            <div class="text-left flex gap-4 flex-col">
+              <h1 class="text-6xl font-bold text-white">Mahindra</h1>
+              <h2 class="text-5xl font-bold text-white">XUV 700</h2>
+            </div>
+
+            <div class="flex items-center justify-center mt-4 space-x-4">
+              <div class="flex items-center space-x-1">
+                <svg
+                  class="w-6 h-6 text-yellow-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="w-6 h-6 text-yellow-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="w-6 h-6 text-yellow-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="w-6 h-6 text-yellow-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+                <svg
+                  class="w-6 h-6 text-yellow-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <span class="text-lg text-yellow-500">108 Reviews</span>
+            </div>
+
+            <p class="text-center text-2xl text-blue-400 font-bold mt-4">
+              Rs.13.18 - 24.58 Lakh
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 gap-2 gap-x-4 text-center"
+          >
+            <div class="flex flex-col justify-start p-4 gap-2">
+              <img
+                src="/images/feature/engine.png"
+                alt="Engine icon"
+                class="w-fit h-12"
+              />
+              <p class="text-blue-400 font-thin text-left text-xl">Engine</p>
+              <p class="text-white text-left text-xl">1997 to 2184 cc</p>
+            </div>
+            <div class="flex flex-col justify-start p-4 gap-2">
+              <img
+                src="/images/feature/safety.png"
+                alt="Safety icon"
+                class="w-fit h-12"
+              />
+              <p class="text-blue-400 font-thin text-left text-xl">Safety</p>
+              <p class="text-white text-left text-xl">5 Star (Global NCAP)</p>
+            </div>
+            <div class="flex flex-col justify-start p-4 gap-2">
+              <img
+                src="/images/feature/body_type.png"
+                alt="Body type icon"
+                class="w-fit h-12"
+              />
+              <p class="text-blue-400 font-thin text-left text-xl">
+                Transmission
+              </p>
+              <p class="text-white text-left text-xl">
+                Manual & Automatic (TC)
+              </p>
+            </div>
+            <div class="flex flex-col justify-start p-4 gap-2">
+              <img
+                src="/images/feature/transmission.png"
+                alt="Transmission icon"
+                class="w-fit h-12"
+              />
+              <p class="text-blue-400 font-thin text-left text-xl">
+                Seating Capacity
+              </p>
+              <p class="text-white text-left text-xl">5 & 7 Seater</p>
+            </div>
+            <div class="flex flex-col justify-start p-4 gap-2">
+              <img
+                src="/images/feature/seating_capacity.png"
+                alt="Seating capacity icon"
+                class="w-fit h-12"
+              />
+              <p class="text-blue-400 font-thin text-left text-xl">Body Type</p>
+              <p class="text-white text-left text-xl">SUV</p>
+            </div>
+            <div class="flex flex-col justify-start p-4 gap-2">
+              <img
+                src="/images/feature/fuel_type.png"
+                alt="Fuel type icon"
+                class="w-fit h-12"
+              />
+              <p class="text-blue-400 font-thin text-left text-xl">Fuel Type</p>
+              <p class="text-white text-left text-xl">Petrol & Diesel</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-8">
+          <img
+            class="w-full lg:w-[40rem]"
+            src="/images/xuv_left.png"
+            alt="Mahindra XUV700 left view"
+          />
+          <div class="flex text-white flex-col gap-8">
+            <p>
+              The Mahindra XUV700 has 1 Diesel Engine and 1 Petrol Engine on
+              offer. The Diesel engine is 2198 cc while the Petrol engine is
+              1999 cc. It is available with Automatic & Manual transmission.
+              Depending upon the variant and fuel type the XUV700 has a mileage
+              of . The XUV700 is a 7 seater 4 cylinder car and has length of
+              4695, width of 1890 and a wheelbase of 2750.
+            </p>
+            <button
+              class="w-fit p-2 px-6 bg-[#FFAC30] text-black font-semibold rounded-2xl"
+            >
+              Check Current Offers
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row-reverse gap-8 mt-8 items-center">
+          <img
+            class="w-full lg:w-[40rem]"
+            src="/images/xuv_right.png"
+            alt="Mahindra XUV700 right view"
+          />
+          <div class="flex text-white flex-col gap-8 justify-end py-12">
+            <h2 class="text-4xl lg:text-6xl font-bold">
+              Mahindra XUV700 Price
+            </h2>
+            <p class="text-lg">
+              The price of Mahindra XUV700 starts at Rs. 13.18 Lakh and goes
+              upto Rs. 24.58 Lakh. Mahindra XUV700 is offered in 23 variants -
+              the base model of XUV700 is MX and the top variant Mahindra XUV700
+              AX7 Diesel AT Luxury Pack AWD which comes at a price tag of Rs.
+              24.58 Lakh.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mx-auto px-4 py-8">
+        <div class="flex flex-col gap-4 w-full">
+          <div class="flex flex-wrap gap-4 px-4 w-full sm:gap-8 sm:px-8">
+            <a href="#" class="text-[#FFAC30] underline text-base sm:text-xl">
+              All Variants
+            </a>
+            <a href="#" class="text-white font-thin text-base sm:text-xl">
+              Diesel Version
+            </a>
+            <a href="#" class="text-white font-thin text-base sm:text-xl">
+              Petrol Version
+            </a>
+            <a href="#" class="text-white font-thin text-base sm:text-xl">
+              Automatic Version
+            </a>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <div
+              class="grid gap-4 px-4 bg-[#454545] w-full rounded-xl py-2 sm:gap-8 sm:px-8 sm:grid-cols-3"
+            >
+              <h3 class="text-[#55C2FF] text-lg sm:text-2xl">Variant</h3>
+              <h3 class="text-[#55C2FF] text-lg sm:text-2xl sm:col-span-2">
+                Price
+              </h3>
+            </div>
+
+            <div
+              class="grid gap-4 px-4 w-full rounded-xl py-2 sm:gap-8 sm:px-8 sm:grid-cols-3"
+            >
+              <div>
+                <h4 class="text-white text-lg sm:text-2xl">MX</h4>
+                <p class="text-white font-extralight text-sm sm:text-lg">
+                  1999 cc, Manual, Petrol
+                </p>
+                <p class="text-white font-extralight text-sm sm:text-lg">
+                  More than 2 months waiting
+                </p>
+              </div>
+              <div>
+                <p class="text-white text-lg sm:text-2xl">Rs.13.18 Lakh*</p>
+                <a
+                  href="#"
+                  class="text-[#FFAC30] font-extralight text-sm sm:text-lg"
+                >
+                  Get On Road Price*
+                </a>
+              </div>
+              <button
+                class="border-[#FFAC30] text-white border rounded-full h-fit p-2 px-4"
+              >
+                View Offers
+              </button>
+            </div>
+
+            <div
+              class="grid gap-4 px-4 w-full rounded-xl py-2 sm:gap-8 sm:px-8 sm:grid-cols-3"
+            >
+              <div>
+                <h4 class="text-white text-lg sm:text-2xl">AX3</h4>
+                <p class="text-white font-extralight text-sm sm:text-lg">
+                  1999 cc, Manual, Petrol
+                </p>
+                <p class="text-white font-extralight text-sm sm:text-lg">
+                  More than 2 months waiting
+                </p>
+              </div>
+              <div>
+                <p class="text-white text-lg sm:text-2xl">Rs.15.50 Lakh*</p>
+                <a
+                  href="#"
+                  class="text-[#FFAC30] font-extralight text-sm sm:text-lg"
+                >
+                  Get On Road Price*
+                </a>
+              </div>
+              <button
+                class="border-[#FFAC30] text-white border rounded-full h-fit p-2 px-4"
+              >
+                View Offers
+              </button>
+            </div>
+
+            <div
+              class="grid gap-4 px-4 w-full rounded-xl py-2 sm:gap-8 sm:px-8 sm:grid-cols-3"
+            >
+              <div>
+                <h4 class="text-white text-lg sm:text-2xl">AX5</h4>
+                <p class="text-white font-extralight text-sm sm:text-lg">
+                  1999 cc, Manual, Petrol
+                </p>
+                <p class="text-white font-extralight text-sm sm:text-lg">
+                  More than 2 months waiting
+                </p>
+              </div>
+              <div>
+                <p class="text-white text-lg sm:text-2xl">Rs.16.98 Lakh*</p>
+                <a
+                  href="#"
+                  class="text-[#FFAC30] font-extralight text-sm sm:text-lg"
+                >
+                  Get On Road Price*
+                </a>
+              </div>
+              <button
+                class="border-[#FFAC30] text-white border rounded-full h-fit p-2 px-4"
+              >
+                View Offers
+              </button>
+            </div>
+          </div>
+
+          <div class="flex justify-end px-4 sm:px-8">
+            <a
+              href="/variants"
+              class="text-[#FFAC30] text-base sm:text-xl flex items-center"
+            >
+              View More
+              <svg
+                class="w-4 h-4 sm:w-6 sm:h-6 hover:text-secondary ml-1"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 16l-6-6h12l-6 6z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mx-auto px-4 py-8">
+        <h3 class="text-xl sm:text-2xl font-bold text-center text-white mb-4">
+          Fuel Type & Mileage
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-white border-spacing-4">
+            <thead class="bg-[#05152e]">
+              <tr>
+                <th class="px-2 sm:px-4 py-2 text-left text-[#55C2FF]">
+                  Fuel Type
+                </th>
+                <th class="px-2 sm:px-4 py-2 text-left text-[#55C2FF]">
+                  Transmission
+                </th>
+                <th class="px-2 sm:px-4 py-2 text-left text-[#55C2FF]">
+                  ARAI Mileage
+                </th>
+                <th class="px-2 sm:px-4 py-2 text-left text-[#55C2FF]">
+                  City Mileage
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-2 sm:px-4 py-2">Diesel</td>
+                <td class="px-2 sm:px-4 py-2">Manual</td>
+                <td class="px-2 sm:px-4 py-2">15.0 kmpl</td>
+                <td class="px-2 sm:px-4 py-2">17.0 kmpl</td>
+              </tr>
+              <tr>
+                <td class="px-2 sm:px-4 py-2">Diesel</td>
+                <td class="px-2 sm:px-4 py-2">Automatic</td>
+                <td class="px-2 sm:px-4 py-2">17.19 kmpl</td>
+                <td class="px-2 sm:px-4 py-2">16.57 kmpl</td>
+              </tr>
+              <tr>
+                <td class="px-2 sm:px-4 py-2">Petrol</td>
+                <td class="px-2 sm:px-4 py-2">Manual</td>
+                <td class="px-2 sm:px-4 py-2">13.0 kmpl</td>
+                <td class="px-2 sm:px-4 py-2">15.0 kmpl</td>
+              </tr>
+              <tr>
+                <td class="px-2 sm:px-4 py-2">Petrol</td>
+                <td class="px-2 sm:px-4 py-2">Automatic</td>
+                <td class="px-2 sm:px-4 py-2">11.0 kmpl</td>
+                <td class="px-2 sm:px-4 py-2">13.0 kmpl</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row items-center gap-4">
+          <div
+            class="p-4 text-white rounded-md mx-auto gap-4 flex flex-col text-center md:text-left"
+          >
+            <div>
+              <h3 class="text-2xl md:text-4xl font-light text-[#f39c12] mb-2">
+                Here's some
+              </h3>
+              <p class="text-4xl md:text-6xl mb-4 font-bold">Expert Advice!</p>
+            </div>
+            <p class="leading-relaxed text-base md:text-xl">
+              With so many segment-first features, drivetrains, seating, and
+              variant options, the XUV700 is trying to please everyone. But does
+              it get the basics right to first get into your consideration?
+            </p>
+          </div>
+          <img
+            class="w-full md:max-w-xs"
+            src="/images/small_xuv.png"
+            alt="Mahindra XUV700 small image"
+          />
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row gap-2 md:gap-4 w-full justify-between container border-b-2 pb-2 mt-4"
+        >
+          <a
+            href="/exterior"
+            class="text-[#FFAC30] text-base md:text-xl flex items-center"
+          >
+            Exterior
+            <svg
+              class="w-4 h-4 md:w-6 md:h-6 text-[#FFAC30] hover:text-secondary ml-1"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 16l-6-6h12l-6 6z" />
+            </svg>
+          </a>
+          <a
+            href="/interior"
+            class="border-l-2 pl-4 md:pl-8 text-white text-base md:text-xl"
+          >
+            Interior
+          </a>
+          <a
+            href="/performance"
+            class="border-l-2 pl-4 md:pl-8 text-white text-base md:text-xl"
+          >
+            Performance
+          </a>
+          <a
+            href="/verdict"
+            class="border-l-2 pl-4 md:pl-8 text-white text-base md:text-xl"
+          >
+            Verdict
+          </a>
+        </div>
+
+        <p class="text-white text-sm md:text-lg font-light pt-4">
+          While the platform is all-new, Mahindra has decided to retain the
+          essence of the XUV500 in the 700's design. Paying homage to the 500
+          are the new headlamps where the "C" shape is maintained by the LED
+          DRLs. However, these pack an all-LED beam and the indicators are
+          dynamic as well. Complementing these are more LEDs in the fog lamps,
+          which also feature cornering lights. The headlamps flow in the slats
+          of the grille which features an aggressive design. The bonnet too gets
+          strong creases which adds muscle to the front look for the 700. Safe
+          to say, you won't be confusing the XUV700 with anything on the road
+          when you see one at night.
+        </p>
+
+        <div class="relative mt-4">
+          <img
+            class="w-full"
+            src="/images/xuv_one_side.png"
+            alt="Mahindra XUV700 side view"
+          />
+          <div
+            class="absolute bottom-8 md:bottom-24 w-full md:w-[600px] left-1/2 transform -translate-x-1/2 text-center"
+          >
+            <button
+              class="w-full md:w-fit p-2 px-4 md:px-6 border-[#FFAC30] text-[#FFAC30] border font-semibold rounded-2xl"
+            >
+              The which i less so that what i created
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4">
+        <p class="text-center">
+          &copy; 2023 Mahindra XUV700. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
