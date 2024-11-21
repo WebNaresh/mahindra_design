@@ -29,7 +29,9 @@
   <body class="bg-black text-gray-100 font-sans">
     <header>
       <nav class="container mx-auto px-4 max-w-full">
-        <div class="flex flex-row md:flex-row gap-4 p-4 items-center">
+        <div
+          class="flex flex-row md:flex-row gap-4 p-4 items-center justify-between md:justify-start"
+        >
           <button class="focus:outline-none hidden md:block">
             <svg
               class="w-8 h-8"
@@ -143,7 +145,7 @@
     <!-- Drawer Navigation for small screens -->
     <div
       id="drawer"
-      class="fixed inset-y-0 left-0 w-64 bg-black text-white transform -translate-x-full drawer md:hidden"
+      class="fixed inset-y-0 left-0 w-64 bg-black z-10 text-white transform -translate-x-full drawer md:hidden"
     >
       <div class="p-4">
         <button id="close-drawer" class="text-white float-right">
