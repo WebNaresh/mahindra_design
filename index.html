@@ -540,45 +540,109 @@
             </p>
           </div>
         </div>
+        <div class="mx-auto">
+          <!-- Mobile view -->
+          <div class="md:hidden space-y-4">
+            <h2 class="text-xl font-semibold text-[#55C2FF] mb-2">
+              Fuel Efficiency
+            </h2>
+            <div class="space-y-4">
+              <div class="bg-[#1c1c1c] p-4 rounded-lg">
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <p class="text-[#55C2FF] text-sm">Fuel Type</p>
+                    <p class="font-semibold">Diesel</p>
+                  </div>
+                  <div>
+                    <p class="text-[#55C2FF] text-sm">Transmission</p>
+                    <p class="font-semibold">Manual</p>
+                  </div>
+                  <div>
+                    <p class="text-[#55C2FF] text-sm">ARAI Mileage</p>
+                    <p class="font-semibold">15.0 kmpl</p>
+                  </div>
+                  <div>
+                    <p class="text-[#55C2FF] text-sm">City Mileage</p>
+                    <p class="font-semibold">17.0 kmpl</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Repeat the above div for each row of data -->
+              <!-- Example for the second row -->
+              <div class="bg-[#1c1c1c] p-4 rounded-lg">
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <p class="text-[#55C2FF] text-sm">Fuel Type</p>
+                    <p class="font-semibold">Diesel</p>
+                  </div>
+                  <div>
+                    <p class="text-[#55C2FF] text-sm">Transmission</p>
+                    <p class="font-semibold">Automatic</p>
+                  </div>
+                  <div>
+                    <p class="text-[#55C2FF] text-sm">ARAI Mileage</p>
+                    <p class="font-semibold">17.19 kmpl</p>
+                  </div>
+                  <div>
+                    <p class="text-[#55C2FF] text-sm">City Mileage</p>
+                    <p class="font-semibold">16.57 kmpl</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Add similar divs for Petrol Manual and Petrol Automatic -->
+            </div>
+          </div>
 
-        <div class="flex text-white flex-col gap-2 justify-end gap-2">
-          <div
-            class="grid px-4 grid-cols-4 gap-0 text-xl rounded-xl bg-[#454545]"
-          >
-            <div class="p-2 font-semibold text-[#55C2FF]">Fuel Type</div>
-            <div class="p-2 font-semibold text-[#55C2FF]">Transmission</div>
-            <div class="p-2 font-semibold text-[#55C2FF]">ARAI Mileage</div>
-            <div class="p-2 font-semibold text-[#55C2FF]">City Mileage</div>
-          </div>
-          <div
-            class="grid grid-cols-4 gap-0 text-xl border-b border-gray-300 px-4"
-          >
-            <div class="bg-black p-2">Diesel</div>
-            <div class="bg-black p-2">Manual</div>
-            <div class="bg-black p-2">15.0 kmpl</div>
-            <div class="bg-black p-2">17.0 kmpl</div>
-          </div>
-          <div
-            class="grid grid-cols-4 gap-0 text-xl border-b border-gray-300 px-4"
-          >
-            <div class="bg-black p-2">Diesel</div>
-            <div class="bg-black p-2">Automatic</div>
-            <div class="bg-black p-2">17.19 kmpl</div>
-            <div class="bg-black p-2">16.57 kmpl</div>
-          </div>
-          <div
-            class="grid grid-cols-4 gap-0 text-xl border-b border-gray-300 px-4"
-          >
-            <div class="bg-black p-2">Petrol</div>
-            <div class="bg-black p-2">Manual</div>
-            <div class="bg-black p-2">13.0 kmpl</div>
-            <div class="bg-black p-2">15.0 kmpl</div>
-          </div>
-          <div class="grid grid-cols-4 gap-0 text-xl px-4">
-            <div class="bg-black p-2 rounded-bl-md">Petrol</div>
-            <div class="bg-black p-2">Automatic</div>
-            <div class="bg-black p-2">11.0 kmpl</div>
-            <div class="bg-black p-2 rounded-br-md">13.0 kmpl</div>
+          <!-- Desktop view -->
+          <div class="hidden md:block">
+            <table class="w-full border-collapse">
+              <thead>
+                <tr class="bg-[#454545] rounded-xl overflow-hidden">
+                  <th
+                    class="p-2 text-left font-semibold text-[#55C2FF] rounded-l-md"
+                  >
+                    Fuel Type
+                  </th>
+                  <th class="p-2 text-left font-semibold text-[#55C2FF]">
+                    Transmission
+                  </th>
+                  <th class="p-2 text-left font-semibold text-[#55C2FF]">
+                    ARAI Mileage
+                  </th>
+                  <th
+                    class="p-2 text-left font-semibold text-[#55C2FF] rounded-r-md"
+                  >
+                    City Mileage
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-700">
+                  <td class="p-2">Diesel</td>
+                  <td class="p-2">Manual</td>
+                  <td class="p-2">15.0 kmpl</td>
+                  <td class="p-2">17.0 kmpl</td>
+                </tr>
+                <tr class="border-b border-gray-700">
+                  <td class="p-2">Diesel</td>
+                  <td class="p-2">Automatic</td>
+                  <td class="p-2">17.19 kmpl</td>
+                  <td class="p-2">16.57 kmpl</td>
+                </tr>
+                <tr class="border-b border-gray-700">
+                  <td class="p-2">Petrol</td>
+                  <td class="p-2">Manual</td>
+                  <td class="p-2">13.0 kmpl</td>
+                  <td class="p-2">15.0 kmpl</td>
+                </tr>
+                <tr>
+                  <td class="p-2">Petrol</td>
+                  <td class="p-2">Automatic</td>
+                  <td class="p-2">11.0 kmpl</td>
+                  <td class="p-2">13.0 kmpl</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
