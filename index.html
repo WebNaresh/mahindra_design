@@ -48,6 +48,22 @@
               />
             </svg>
           </button>
+          <button id="menu-toggle" class="focus:outline-none md:hidden">
+            <svg
+              class="w-8 h-8"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
           <div
             class="flex bg-[#2E2E2E] gap-2 rounded-md p-2 md:w-[400px] items-center"
           >
@@ -84,22 +100,7 @@
               />
             </svg>
           </div>
-          <button id="menu-toggle" class="focus:outline-none md:hidden">
-            <svg
-              class="w-8 h-8"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="white"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          </button>
+     
         </div>
 
         <div
@@ -195,7 +196,7 @@
           class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
         ></div>
         <p
-          class="text-white md:absolute w-full bottom-[12rem] px-4 sm:px-6 md:px-8 max-w-[90%] sm:max-w-[80%] md:max-w-[40%] md:left-0 md:right-0 md:mx-auto text-center font-light text-2xl"
+          class="text-white md:absolute w-full bottom-[4rem] px-4 sm:px-6 md:px-8 max-w-[90%] sm:max-w-[80%] md:max-w-[80%] md:left-0 md:right-0 md:mx-auto text-center font-light text-2xl"
         >
           With its Sci-Fi Technology, Spirited Performance and World-Class
           Safety, this powerhouse of an SUV is obsessively engineered to dial up
@@ -395,7 +396,7 @@
 
       <section class="container mx-auto px-4 py-6 sm:py-8 container">
         <div class="flex flex-col gap-4 w-full">
-          <div class="flex flex-wrap gap-3 w-full justify-between">
+          <div class="grid grid-cols-1 items-center sm:grid-cols-2 md:grid-cols-4">
             <a href="#" class="text-[#FFAC30] underline text-2xl">
               All Variants
             </a>
@@ -653,13 +654,13 @@
       <section class="container mx-auto px-4 py-8 max-w-full">
         <div class="flex flex-col md:flex-row gap-4 relative items-center container mx-auto my-24">
           <div
-            class="p-4 text-white rounded-md mx-auto gap-4 flex flex-col text-center md:text-left w-1/2"
+            class="p-4 text-white rounded-md mx-auto gap-4 flex flex-col text-center md:text-left md:w-1/2 w-full"
           >
             <div>
               <h3 class="text-2xl md:text-7xl font-light text-[#f39c12] mb-2">
                 Here's some
               </h3>
-              <p class="text-8xl mb-4 font-bold">Expert Advice!</p>
+              <p class="text-4xl lg:text-8xl mb-4 font-bold">Expert Advice!</p>
             </div>
             <p class="leading-relaxed text-3xl max-max-w-[794px]">
               With so many segment-first features, drivetrains, seating, and
@@ -676,7 +677,7 @@
 
         <div class="container gap-8 flex flex-col mx-auto">
           <div
-            class="flex flex-col md:flex-row gap-2 md:gap-4 justify-between border-b-2 pb-4 mt-4 w-full"
+            class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-4 justify-between border-b-2 pb-4 mt-4 w-[-webkit-fill-available]"
           >
             <a
               href="/exterior"
@@ -694,19 +695,19 @@
             </a>
             <a
               href="/interior"
-              class="border-l-2 pl-4 md:pl-8 text-white text-3xl p-4"
+              class="border-l-2 pl-4 md:pl-8 text-white text-3xl p-4 w-fit"
             >
               Interior
             </a>
             <a
               href="/performance"
-              class="border-l-2 pl-4 md:pl-8 text-white text-3xl p-4"
+              class="border-l-2 pl-4 md:pl-8 text-white text-3xl p-4 w-fit"
             >
               Performance
             </a>
             <a
               href="/verdict"
-              class="border-l-2 pl-4 md:pl-8 text-white text-3xl p-4"
+              class="border-l-2 pl-4 md:pl-8 text-white text-3xl p-4 w-fit"
             >
               Verdict
             </a>
@@ -746,7 +747,7 @@
           </div>
         </div>
         <div
-          class="flex flex-col md:flex-row items-center gap-4 relative container mx-auto"
+          class="flex flex-col lg:flex-row items-center gap-4 relative container mx-auto"
         >
           <img
             class="w-[50rem] md:w-[30vw] h-auto left-0 top-0 z-[-500] mx-8"
@@ -754,7 +755,7 @@
             alt="Mahindra XUV700 small image"
           />
           <div
-            class="text-white rounded-md gap-4 flex flex-col text-center md:text-left container"
+            class="text-white rounded-md gap-4 flex flex-col-reverse text-center md:text-left container w-fit"
           >
             <div class="flex gap-2 md:gap-6">
               <p class="md:text-8xl text-2xl mb-4 font-bold">Pros</p>
